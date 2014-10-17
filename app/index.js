@@ -49,8 +49,8 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   sass: function() {
-    this.template('stylesheets/application.scss', 'stylesheets/application.scss');
-    this.template('stylesheets/_example-buttons.scss', 'stylesheets/_example-buttons.scss');
+    this.template('application.scss', 'stylesheets/application.scss');
+    this.template('_example-buttons.scss', 'stylesheets/_example-buttons.scss');
   },
 
   end: function () {
