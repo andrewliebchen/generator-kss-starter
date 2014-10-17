@@ -1,0 +1,19 @@
+{
+  "name": "kss-starter",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app/index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Andrew Liebchen",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "yeoman-generator": "^0.17.7",
+    "yosay": "^1.0.0"
+  },
+  "devDependencies": {
+    "underscore": "^1.6.0"
+  }
+}
