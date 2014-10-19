@@ -77,6 +77,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // First run task needed by the Yeoman generator
     shell: {
       kssinit: {
         command: 'kss-node --init template',
