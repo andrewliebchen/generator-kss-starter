@@ -18,15 +18,16 @@ module.exports = yeoman.generators.Base.extend({
 
     var prompts = [{
       type: 'confirm',
-      name: 'libsass',
+      name: 'libSass',
+      value: 'useLibSass',
       message: "Would you like to use " + chalk.green("LibSass") + "? " +
         "Otherwise, we'll install " + chalk.magenta("Ruby Sass"),
       default: false
     }];
 
     this.prompt(prompts, function (props) {
-      this.useRubySass = prompts.libsass;
-      this.useLibSass  = !prompts.libsass;
+      this.useRubySass = !props.libSass;
+      this.useLibSass  = props.libSass;
 
       done();
     }.bind(this));
@@ -48,6 +49,10 @@ module.exports = yeoman.generators.Base.extend({
     this.template('gitignore', '.gitignore');
   },
 
+  gemfile: function() {
+    this.template('_Gemfile', 'Gemfile');
+  },
+
   sass: function() {
     this.template('application.scss', 'stylesheets/application.scss');
     this.template('_example-buttons.scss', 'stylesheets/_example-buttons.scss');
@@ -58,7 +63,7 @@ module.exports = yeoman.generators.Base.extend({
       this.installDependencies({
         skipInstall: this.options['skip-install'],
         callback: function () {
-          this.spawnCommand('grunt', ['shell:kssinit']);
+          this.spawnCommand('grunt', ['shell']);
         }.bind(this)
       });
     }

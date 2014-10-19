@@ -4,6 +4,7 @@ module.exports = function (grunt) {
   // set livereload to random port in range 10000-60000
   process.env['LIVERELOAD_PORT'] = process.env['LIVERELOAD_PORT'] || Math.floor(Math.random()*50000)+10000;
 
+  require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
@@ -81,6 +82,13 @@ module.exports = function (grunt) {
     shell: {
       kssinit: {
         command: 'kss-node --init template',
+        options: {
+          stdout: true,
+          failOnError: true
+        }
+      },
+      gemfileinit: {
+        command: 'bundle install',
         options: {
           stdout: true,
           failOnError: true
