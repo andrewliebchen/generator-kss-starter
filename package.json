@@ -1,5 +1,5 @@
 {
-  "name": "kss-starter",
+  "name": "generator-kss-starter",
   "version": "0.1.0",
   "description": "",
   "main": "app/index.js",
