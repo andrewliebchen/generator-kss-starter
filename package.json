@@ -4,9 +4,15 @@
   "description": "",
   "main": "app/index.js",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "kss",
+    "sass",
+    "libsass",
+    "grunt",
+    "scss-lint"
   ],
   "author": "Andrew Liebchen",
+  "bugs": "https://github.com/andrewliebchen/generator-kss-starter/issues",
   "license": "MIT",
   "dependencies": {
     "chalk": "^0.5.1",
